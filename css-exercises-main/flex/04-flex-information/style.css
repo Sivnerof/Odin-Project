@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 img {
@@ -10,6 +11,20 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 52px;
+}
+
+.plant-info {
+  width: 200px;
 }
 
 /* do not edit this footer */
@@ -24,3 +39,11 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/*
+- All items are centered on the page (horizontally, not vertically).
+- There is 52px between each item.
+- The items are arranged horizontally on the page.
+- The items are only 200px wide and the text wraps.
+- The item text is centered.
+*/
