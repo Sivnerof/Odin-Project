@@ -1,5 +1,18 @@
 /* Set Up */
 
+:root {
+    --dark-color: #1F2937;
+    --ultra-white: #F9FAF8;
+    --lighter-white: #E5E7EB;
+    --empty-columns: 0% 10% 0% 10%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
 /* 
 hero, footer = #1F2937
 hero main text = 48px extra-bold #F9FAF8
@@ -10,3 +23,70 @@ information header text = 36px extrabold #1F2937
 quote section bg color = #E5E7EB
 quote text = 36px light italic #1F2937 
 */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+header, footer {
+    background-color: var(--dark-color);
+}
+
+main {
+    flex-grow: 1;
+    border: 4px solid blue;
+}
+
+section {
+    border: 4px solid red;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    padding-left: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--lighter-white);
+}
+
+.container {
+    margin: var(--empty-columns);
+    /*display: flex;*/
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.site-logo {
+    align-items: center;
+    font-size: 24px;
+    color: var(--ultra-white);
+}
+
+.site-links {
+    font-size: 18px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    color: var(--lighter-white);
+}
