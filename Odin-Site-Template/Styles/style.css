@@ -1,31 +1,12 @@
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+/* Set Up */
 
-ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-}
-
-.header {
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.links {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
+/* 
+hero, footer = #1F2937
+hero main text = 48px extra-bold #F9FAF8
+hero secondary text, header link text = 18px #E5E7EB
+header logo text = 24px #F9FAF8
+button color =, cta bg color = #3882F6
+information header text = 36px extrabold #1F2937
+quote section bg color = #E5E7EB
+quote text = 36px light italic #1F2937 
+*/
