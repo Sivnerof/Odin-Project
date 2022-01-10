@@ -14,10 +14,8 @@
 
 
 /* 
-hero, footer = #1F2937
 hero main text = 48px extra-bold #F9FAF8
 hero secondary text, header link text = 18px #E5E7EB
-header logo text = 24px #F9FAF8
 button color =, cta bg color = #3882F6
 information header text = 36px extrabold #1F2937
 quote section bg color = #E5E7EB
@@ -61,6 +59,11 @@ a {
     color: var(--lighter-white);
 }
 
+img {
+    width: 400px;
+    height: auto;
+}
+
 .container {
     margin: var(--empty-columns);
     /*display: flex;*/
@@ -81,6 +84,25 @@ a {
 
 .site-links {
     font-size: 18px;
+}
+
+.hero-section {
+    background-color: var(--dark-color);
+}
+
+.hero {
+    display: flex;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.hero-right {
+    display: flex;
+    flex: 1;
 }
 
 .footer {
