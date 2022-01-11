@@ -10,7 +10,7 @@ By no means is this page perfect, but I'm proud to have finished it. I'm leaving
 
 ## Attributions:
 ### Photos of peoples faces were generated randomly from: 
-* [thispersondoesnotexist.com](https://thispersondoesnotexist.com/) 
+* ###[thispersondoesnotexist.com](https://thispersondoesnotexist.com/) 
 
 ### Photo of brick wall: 
 * ### source: [unsplash.com](https://unsplash.com/photos/QMDap1TAu0g)
