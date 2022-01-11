@@ -15,10 +15,7 @@
 
 
 /* 
-button color =, cta bg color = #3882F6
-information header text = 36px extrabold #1F2937
-quote section bg color = #E5E7EB
-quote text = 36px light italic #1F2937 
+cta bg color = #3882F6
 */
 
 body {
@@ -37,7 +34,7 @@ main {
     flex-grow: 1;
 }
 
-section:not(:first-child) {
+section:nth-child(4) {
     border: 4px solid red;
 }
 
@@ -49,6 +46,12 @@ h1 {
     font-size: 48px;
     font-weight: 900;
     margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--dark-color);
 }
 
 p {
@@ -84,6 +87,12 @@ a {
 img {
     width: 100%;
     height: 70%;
+}
+
+q {
+    font-size: 36px;
+    font-style: italic; 
+    color: var(--dark-color) 
 }
 
 .container {
@@ -128,6 +137,43 @@ img {
     justify-content: center;
     align-items: center;
     flex: 1;
+}
+
+.information {
+    text-align: center;
+    padding-bottom: 75px;
+}
+
+.info-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+}
+
+.info img {
+    height: 150px;
+    width: 150px;
+    border: 5px solid var(--button-blue);
+    border-radius: 10px;
+}
+
+.text {
+    font-style: italic;
+    color: var(--dark-color)
+}
+
+.quote-section {
+    background-color: var(--lighter-white);
+}
+
+.quote {
+    padding: 30px;
+}
+
+#author {
+    color: var(--dark-color);
+    text-align: end;
 }
 
 .footer {
