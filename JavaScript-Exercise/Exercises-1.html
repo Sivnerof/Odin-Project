@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <script>
+        // Your JavaScript goes here!
+        console.log("Hello, World!")
+
+        /*
+            * Exercise 1: Working With Variables
+            * Declare two variables: admin and name.
+            * Assign the value "John" to name.
+            * Copy the value from name to admin.
+            * Show the value of admin using alert (must output “John”).
+        */
+
+        // Solution: 1
+        let admin, name;
+        name = "John";
+        admin = name;
+        alert(admin);
+
+
+        /*
+            * Exercise 2: Giving The Right Names
+            * Create a variable with the name of our planet. How would you name such a variable?
+            * Create a variable to store the name of a current visitor to a website. How would you name that variable?
+        */
+
+        // Solution 2:
+        const ourPlanet = "Earth";
+        let currentVisitor = "Visitor";
+
+
+        /*
+            * Exercise 3: Uppercase Const
+            * Examine the following code:
+            *   const birthday = '18.04.1982';
+            *   const age = someCode(birthday);
+            * Would it be right to use upper case for birthday? For age? Or even for both?
+        */
+
+        /*
+            * Solution 3:
+            * The birthday const variable is an unchanging date so it should be all uppercase.
+            * Because the age const variable changes depending on the year it should be set to lowercase.  
+        */
+
+
+        /*
+            * Exercise 4: The Postfix and Prefix Forms
+            * What are the final values of all variables a, b, c and d after the code below?
+            * let a = 1, b = 1;
+            * let c = ++a;
+            * let d = b++; 
+        */
+
+        /*
+            * Solution 4:
+            * a becomes 2 after it was incremented using prefix notation on line 2.
+            * b becomes 2 after it was incremented using postfix notation on line 3.
+            * c becomes 2 after taking the return value of the a variables prefixed incrementation.
+            * d becomes 1 after storing the current return value of b prior to it's incrementation due to it's postfix notation.
+        /*
+
+
+        /*
+            * Exercise 5: Assignment Result
+            * What are the values of a and x after the code below?
+            * let a = 2;
+            * let x = 1 + (a *= 2);
+        */
+
+        /*
+            * Solution 5:
+            * a becomes 4 
+            * x becomes 5
+        */
+        
+
+        /*
+            Exercise 6: Type Conversions
+            What are results of these expressions?
+            * 1. "" + 1 + 0
+            * 2. "" - 1 + 0
+            * 3. true + false
+            * 4. 6 / "3"
+            * 5. "2" * "3"
+            * 6. 4 + 5 + "px"
+            * 7. "$" + 4 + 5
+            * 8. "4" - 2
+            * 9. "4px" - 2
+            * 10. "  -9  " + 5
+            * 11. "  -9  " - 5
+            * 12. null + 1
+            * 13. undefined + 1
+            * 14. " \t \n" - 2
+        */
+
+        /*
+        
+        */
+        
+
+    </script>
+</body>
+</html>
