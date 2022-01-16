@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="javascript.js"></script>
 </head>
 <body>
     <script>
@@ -104,9 +103,80 @@
         */
 
         /*
-        
+            Solution 6
+            * 1. "10" (String Concatenation)
+            * 2. -1 (quotations are interpreted as 0 because of the binary operator)
+            * 3. 1 (1 + 0)
+            * 4. 3 (converts string to number because of binary operator)
+            * 5. 6 (again because of binary operator)
+            * 6. "9px" (adds first two numbers, then concatenates to string)
+            * 7. "$45" (first argument is a string so this becomes string concatenation)
+            * 8. 2 (use of binary operator)
+            * 9. NaN (cannot subtract number from string)
+            * 10. "   -9  5" (string concatenation)
+            * 11. -14 (use of binary operator)
+            * 12. 1 (0 + 1)
+            * 13. NaN (can't add 1 to undefined)
+            * 14. -2 (Because the string consists of only newline and tab it is seen as empty, becoming 0)        
         */
-        
+
+
+        /*
+            * Exercise 7: Fix the Addition
+            * Here’s code that asks the user for two numbers and shows their sum.
+            *   let a = prompt("First number?", 1);
+            *   let b = prompt("Second number?", 2);
+            *   alert(a + b);
+            * It works incorrectly. 
+            * The output in the example below is 12 (for default prompt values).
+            * Why? Fix it. The result should be 3.
+        */
+
+        // Solution 7:
+        let a = prompt("First number?", 1);
+        let b = prompt("Second number?", 2);
+        alert(+a + +b);
+
+        /*
+            Alternative Solution 7:
+            A better way is to prepend the prompt with the + symbol
+            Or using Number()
+            * let a = +prompt("First number?", 1);
+            * let b = +prompt("Second number?", 2);
+        */
+
+
+        /*
+            * Exercise 8:
+            * Add 2 numbers together
+            * Add a sequence of 6 different numbers together.
+            * Print the solution to the following equation: (4 + 6 + 9) / 77
+            * Type the following at the top of the script tag: let a = 10
+            * In the console console.log(a) should print 10
+            * Try the following: 9 * a
+            * and this: let b = 7 * a (returns undefined *) and then console.log(b)
+            * Declare a constant variable max with the value 57
+            * Set another variable actual to max - 13
+            * Set another variable percentage to actual / max
+            * Remember that an assignment (such as b = 7 * a) 
+            * returns undefined and you cannot assign a value to a variable and read its value in the same line.
+        */
+
+        // Solution 8:
+        console.log(32 + 23);
+        console.log(10 + 20 + 30 + 40 + 50 + 60);
+        console.log((4 + 6 + 9) / 77);
+        let aa = 10;
+        console.log(aa);
+        console.log(9 * aa);
+        let bb = 7 * aa;
+        console.log(bb);
+        const MAX = 57;
+        console.log(MAX);
+        let actual = MAX - 13;
+        console.log(actual);
+        let percentage = actual / MAX;
+        console.log(percentage);
 
     </script>
 </body>
