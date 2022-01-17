@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundamentals-2</title>
 </head>
 <body>
     <script>
@@ -31,10 +31,16 @@
             * 7. Returns false (strict equality check of two different data types)
         */
 
+        
         /*
             * Exercise 2: Result of OR
             * What is the code below going to output?
             * alert( null || 2 || undefined );
+        */
+
+        /*
+            * Solution 2:
+            * 2 (null is falsy and 2 is the first truthy value)
         */
         
         
@@ -44,42 +50,78 @@
             * alert( alert(1) || 2 || alert(3) );
         */
 
+        /*
+            * Solution 3:
+            * 1 then 2 (alert returns undefined so the first argument when evaluated returns 1 
+            * then evaluates the second argument a truthy value and returns 2)
+        */
 
+        
         /*
             * Exercise 4: Result of AND
             * What is this code going to show?
             * alert( 1 && null && 2 );
         */
 
+        /*
+            * Solution 4:
+            * Null (because it is the first falsy value)
+        */
 
+        
         /*
             * Exercise 5: Result of AND'ed alerts
             * What will this code show?
             * alert( alert(1) && alert(2) );
         */
+        
+        /*
+            * Solution 5:
+            * 1, undefined (Because alert returns undefined it will evaluate the first argument alerting 1 then returning)
+        */
 
-
+       
         /*
             * Exercise 6: Result of OR AND OR
             * What will the result be?
             * alert( null || 2 && 3 || 4 );
         */
+        
+        /*
+            * Solution 6:
+            * 3 (The && is evaluated first because of its higher precedence returning 3 which is also the first truthy value)
+        */
 
-
+       
         /*
             * Exercise 7: Check Range Between
             * Write an if condition to check that age is between 14 and 90 inclusively.
             * “Inclusively” means that age can reach the edges 14 or 90.
         */
 
+        // Solution 7:
+        age = prompt("What is your age?");
+        if (age >= 14 && age <= 90){
+            console.log("Success")
+        }
 
+        /*
+            * Solution 7:
+            * The output will be 2 null is falsy and 2 is the first truthy value
+        */
+       
+       
         /*
             * Exercise 8: Check range outside
             * Write an if condition to check that age is NOT between 14 and 90 inclusively.
             * Create two variants: the first one using NOT !, the second one – without it.
         */
+        /*
+            * Solution 8:
+            * The output will be 2 null is falsy and 2 is the first truthy value
+        */
 
-
+       
         /*
             * Exercise 9: Question about "if"
             * Which of these alerts are going to execute?
@@ -87,6 +129,11 @@
             * if (-1 || 0) alert( 'first' );
             * if (-1 && 0) alert( 'second' );
             * if (null || -1 && 1) alert( 'third' );
+        */
+
+                /*
+            * Solution 9:
+            * The output will be 2 null is falsy and 2 is the first truthy value
         */
     </script>
 </body>
