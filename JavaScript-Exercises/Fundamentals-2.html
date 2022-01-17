@@ -100,40 +100,45 @@
         */
 
         // Solution 7:
-        age = prompt("What is your age?");
+        let age = prompt("What is your age?");
         if (age >= 14 && age <= 90){
             console.log("Success")
         }
 
-        /*
-            * Solution 7:
-            * The output will be 2 null is falsy and 2 is the first truthy value
-        */
-       
-       
+
         /*
             * Exercise 8: Check range outside
             * Write an if condition to check that age is NOT between 14 and 90 inclusively.
             * Create two variants: the first one using NOT !, the second one – without it.
         */
-        /*
-            * Solution 8:
-            * The output will be 2 null is falsy and 2 is the first truthy value
-        */
+        
+        // Solution 8a:
+        age = prompt("What is your age? (Second Check)");
+        if (!(age >= 14 && age <= 90)){
+            console.log("Denied")
+        }
 
+        // Solution 8b:
+        age = prompt("What is your age? (Third Check)")
+        if (age < 14 || age > 90){
+            console.log("Age out of bounds")
+        }
        
+        
         /*
             * Exercise 9: Question about "if"
             * Which of these alerts are going to execute?
             * What will the results of the expressions be inside if(...)?
-            * if (-1 || 0) alert( 'first' );
-            * if (-1 && 0) alert( 'second' );
-            * if (null || -1 && 1) alert( 'third' );
+            *   1. if (-1 || 0) alert( 'first' );
+            *   2. if (-1 && 0) alert( 'second' );
+            *   3. if (null || -1 && 1) alert( 'third' );
         */
 
-                /*
+        /*
             * Solution 9:
-            * The output will be 2 null is falsy and 2 is the first truthy value
+            * 1. Alerts (-1 is a truthy value)
+            * 2. Does not alert (0 is a falsy value)
+            * 3. Alerts (&& precedence results in a return of 1 a truthy value)
         */
     </script>
 </body>
