@@ -140,6 +140,39 @@
             * 2. Does not alert (0 is a falsy value)
             * 3. Alerts (&& precedence results in a return of 1 a truthy value)
         */
+
+
+        /*
+            * Exercise 10: Login With Prompt
+            * If the visitor enters "Admin", then prompt for a password. 
+            * If the input is an empty line or Esc – show “Canceled”. 
+            * If it’s another string – then show “I don’t know you”.
+            * The password is checked as follows:
+            * If it equals “TheMaster”, then show “Welcome!”,
+            * Another string – show “Wrong password”,
+            * For an empty string or cancelled input, show “Canceled”
+        */
+
+        //Solution 10:
+        const HEWHOGOES = prompt("Who goes there?");
+        if (HEWHOGOES === "Admin"){
+            const PASSWORD = prompt("Password?");
+            if (PASSWORD == null || undefined || 0){
+                alert("Cancelled");
+            }
+            else if (PASSWORD === "TheMaster"){
+                alert("Welcome!");
+            }
+            else {
+                alert("I don't know you!");
+            }
+        }
+        else if (HEWHOGOES == null || undefined || 0){
+            alert("Cancelled");
+        }
+        else {
+            alert("I don't know you!");
+        }
     </script>
 </body>
 </html>
