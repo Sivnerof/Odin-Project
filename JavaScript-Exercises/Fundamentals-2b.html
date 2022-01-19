@@ -19,33 +19,44 @@
 
         /*
             * Solution 1:
+            * Yes (Non-empty string)
         */
 
         
         /*
-            * Exercise 2: The Nameof JavaScript
-            * Using the if..else construct, write the code which asks: ‘What is the “official” name of JavaScript?’
-            * If the visitor enters “ECMAScript”, then output “Right!”, otherwise – output: “You don’t know? ECMAScript!”
+            * Exercise 2: The Name of JavaScript
+            * Using the if...else construct, write the code which asks: 
+            * ‘What is the “official” name of JavaScript?’
+            * If the visitor enters “ECMAScript”, then output “Right!”, 
+            * otherwise – output: “You don’t know? ECMAScript!”
         */
 
-        /*
-            * Solution 2:
-        */
-
+        // Solution 2:
+        let answer = prompt('What is the "official" name of JavaScript?', '');
+        if(answer == "ECMAScript"){
+            alert("Right!");
+        } else {
+            alert("You don't know? ECMAScript!");
+        }
         
         /*
             * Exercise 3: Show the Sign
-            * Using if..else, write the code which gets a number via prompt and then shows in alert:
+            * Using if...else, write the code which gets a number via prompt and then shows in alert:
             * 1, if the value is greater than zero,
             * -1, if less than zero,
             * 0, if equals zero.
             * In this task we assume that the input is always a number.
         */
         
-        /*
-            * Solution 3:
-        */
-
+        // Solution 3: 
+        let userNumber = prompt("Number: ", '')
+        if (userNumber > 0){
+            alert("1");
+        } else if (userNumber == 0){
+            alert("0");
+        } else {
+            alert("-1");
+        }
 
         /*
             * Exercise 4: Rewriting "if"
@@ -58,14 +69,17 @@
             *   }
         */
 
-        /*
-            * Solution 4:
-        */
+        // Solution 4:
+        let a = prompt("First Number: ");
+        let b = prompt("Second Number: ");
+        let result = (+a + +b < 4) ? 'Below' : 'Over';
+        alert(result);
+
 
         
         /*
             * Exercise 5: Rewriting "if...else"
-            * Rewrite if..else using multiple ternary operators '?'.
+            * Rewrite if...else using multiple ternary operators '?'.
             *
             *   let message;
             *
@@ -80,9 +94,13 @@
             *   }
         */
 
-        /*
-            * Solution 5:
-        */
+        // Solution:
+        let login = prompt("Username: ");
+        let message = (login == 'Employee') ? 'Hello' :
+                (login == 'Director') ? 'Greetings' :
+                (login == '') ? 'No login':
+                '';
+        alert(message);
     </script>
 </body>
 </html>
