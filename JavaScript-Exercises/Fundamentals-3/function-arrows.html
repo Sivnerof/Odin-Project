@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrows</title>
+</head>
+<body>
+    <script>
+        /*
+            * Exercise 1: Rewriting with arrow functions
+            * Replace Function Expressions with arrow functions in the code below:
+            * 
+            *   function ask(question, yes, no) {
+            *       if (confirm(question)) yes();
+            *       else no();
+            *   }
+            *
+            *   ask(
+            *       "Do you agree?",
+            *       function() { alert("You agreed."); },
+            *       function() { alert("You canceled the execution."); }
+            *   );
+        */
+
+        // Solution 1:
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+            
+        ask(
+            "Do you agree?",
+            () => alert("You agreed."),
+            () => alert("You canceled the execution.")
+        );
+    </script>
+</body>
+</html>
