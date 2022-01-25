@@ -1,21 +1,25 @@
 function computerPlay(){
-    const computerChoices = ["rock", "paper", "scissors"];
-    return computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    const availableChoices = ["rock", "paper", "scissors"];
+    const computerChoice = availableChoices[Math.floor(Math.random() * availableChoices.length)];
+    return computerChoice;
 }
 
-console.log(computerPlay());
+function playRound(computerSelection, playerSelection){
+    const playerChoice = playerSelection.toLowerCase();
+    console.log(computerSelection, playerSelection)
+    if (playerChoice === computerSelection){
+        return `${playerChoice} vs ${computerSelection}: Tie Game!`;
+    } else if (playerChoice === "rock" && computerSelection === "scissors" ||
+            playerChoice === "paper" && computerSelection === "rock" || 
+            playerChoice === "scissors" && computerSelection === "paper"){
+        return `${playerChoice} beats ${computerSelection}, Player Wins!!!`;
+    } else {
+        return `${computerSelection} beats ${playerChoice}, Computer Wins!!!`;
+    }
+}
 
-/*
-    
-    Write a function that plays a single round of Rock Paper Scissors. 
-    The function should take two parameters - 
-    the playerSelection and computerSelection - 
-    and then return a string that declares the winner of the round like so: 
-    "You Lose! Paper beats Rock"
-    
-    Make your function’s playerSelection parameter case-insensitive 
-    (so users can input rock, ROCK, RocK or any other variation).
-    
+console.log(playRound(computerPlay(), prompt("Rock, Paper, or Scissors?", "")));
+/*    
     Important note: you want to return the results of this function call, not console.log() them. 
     To test this function console.log the results:
     
