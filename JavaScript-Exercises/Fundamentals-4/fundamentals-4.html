@@ -20,6 +20,7 @@
 
         /*
             * Solution 1:
+            * 1 (the postfix notation causes the value prior to deincrementation being alerted)
         */
 
         
@@ -39,6 +40,22 @@
 
         /*
             * Solution 2:
+            * Prefix Notation-
+            * Because of the prefix notation, 
+            * the value is incremented first returning the new value so the loop outputs...
+            * 1                
+            * 2                 
+            * 3                
+            * 4               
+            *
+            * Postfix Notation-
+            * Because of the postfix notation the conditonal checks the return value prior to its incrementation.
+            * But because the alert is seperate, it alerts the current value causing this loop to alert 5 times. 
+            * 1
+            * 2
+            * 3
+            * 4
+            * 5
         */
 
     
@@ -55,6 +72,13 @@
 
         /*
             * Solution 3:
+            * Because the incrementing variable is seperated from the conditon check the return value is not used.
+            * Resulting in no difference between the alerts from the postfix and prefix loops. 
+            * 0
+            * 1
+            * 2
+            * 3
+            * 4
         */
 
 
@@ -63,10 +87,12 @@
             * Use the for loop to output even numbers from 2 to 10.
         */
 
-        /*
-            * Solution 4:
-        */
-
+        // Solution 4:
+        for (let i = 2; i <= 10; i++){
+            if(i % 2 == 0){
+                console.log(`${i} is an even number.`);
+            }
+        }
 
         /*
             * Exercise 5: Replace "for" with "while"
@@ -77,36 +103,49 @@
             *    }
         */
 
-        /*
-            * Solution 5:
-        */
+        // Solution 5:
+        for (let i = 0; i < 3; i++) {
+            alert( `number ${i}!` );
+        }
+
+        let i = 0;
+        while (i < 3){
+            alert(`number ${i}!`);
+            i++;
+        };
 
 
         /*
             * Exercise 6: Repeat until the input is correct
-            * Write a loop which prompts for a number greater than 100. If the visitor enters another number – ask them to input again.
-            * The loop must ask for a number until either the visitor enters a number greater than 100 or cancels the input/enters an empty line.
-            * Here we can assume that the visitor only inputs numbers. There’s no need to implement a special handling for a non-numeric input in this task.
+            * Write a loop which prompts for a number greater than 100. 
+            * If the visitor enters another number – ask them to input again.
+            * The loop must ask for a number until either the visitor enters a number greater than 100 
+            * or cancels the input/enters an empty line.
+            * Here we can assume that the visitor only inputs numbers. 
+            * There’s no need to implement a special handling for a non-numeric input in this task.
         */
 
-        /*
-            * Solution 6:
-        */
-
+        // Solution 6:
+        let number;
+        do {
+            number = prompt("Enter a number greater than 100: ", 0); 
+        } while (number <= 100 && number);
 
         /*
             * Exercise 7: Output prime numbers
-            * An integer number greater than 1 is called a prime if it cannot be divided without a remainder by anything except 1 and itself.
-            * In other words, n > 1 is a prime if it can’t be evenly divided by anything except 1 and n.
-            * For example, 5 is a prime, because it cannot be divided without a remainder by 2, 3 and 4.
             * Write the code which outputs prime numbers in the interval from 2 to n.
-            * For n = 10 the result will be 2,3,5,7.
             * P.S. The code should work for any n, not be hard-tuned for any fixed value.
         */
 
-        /*
-            * Solution 7:
-        */
+        // Solution 7:
+        let userNumber = prompt("Range of primes up to: ", 0);
+        nextPrime:
+        for (let i = 2; i <= userNumber; i++){
+            for (let j = 2; j < i; j++){
+                if (i % j == 0) continue nextPrime;
+            }
+            console.log(i);
+        }
     </script>
 </body>
 </html>
