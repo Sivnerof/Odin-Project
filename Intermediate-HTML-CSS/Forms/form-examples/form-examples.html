@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="form.js" defer></script>
     <title>Form Elements</title>
 </head>
 <body>
@@ -214,6 +215,85 @@
         <p>Heat the oven to <meter min="200" max="500"
             value="350">350 degrees</meter>.
         </p>
+        <hr>
+    </div>
+
+    <div>
+        <p>Meter Change</p>
+        <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+        <hr>
+    </div>
+
+    <div>
+        <label for="price">Choose a maximum house price: </label>
+        <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+        <output class="price-output" for="price"></output>
+        <hr>
+    </div>
+
+    <div>
+        <input type="image" alt="Click me!" src="pexels-kseniya-buraya.jpg" width="80" height="30">
+        <hr>
+    </div>
+
+    <div>
+        <input type="file" name="file" id="file" accept="image/*" multiple>
+        <hr>
+    </div>
+
+    <div>
+        <p>On some mobile devices, the file picker can access photos, 
+            videos, and audio captured directly by the device's camera and microphone by
+             adding capture information to the accept attribute like so:
+        </p>
+        <input type="file" accept="image/*;capture=camera">
+        <input type="file" accept="video/*;capture=camcorder">
+        <input type="file" accept="audio/*;capture=microphone">
+        <hr>
+    </div>
+
+    <div>
+        <input type="datetime-local" name="datetime" id="datetime">
+        <hr>
+    </div>
+
+    <div>
+        <p>Month Input</p>
+        <p>Not working in Firefox</p>
+        <input type="month" name="month" id="month">
+        <hr>
+    </div>
+
+    <div>
+        <input type="time" name="time" id="time">
+        <hr>
+    </div>
+
+    <div>
+        <p>Week Input</p>
+        <p>Not working in Firefox</p>
+        <input type="week" name="week" id="week">
+        <hr>
+    </div>
+
+    <div>
+        <input type="color" name="color" id="color">
+        <hr>
+    </div>
+
+    <div>
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+        </datalist>
     </div>
 </body>
 </html>
