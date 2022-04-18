@@ -8,6 +8,15 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  gap: 15px;
+  grid-template: 100px 100px 500px 100px / 300px 900px;
+  grid-template-areas: 
+    "header header"
+    "sidebar navigation"
+    "sidebar article"
+    "footer footer"
+  ;
 }
 
 .container div {
@@ -31,10 +40,12 @@ body, html {
 
 .nav {
   background-color: #00DDFF;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .article {
   background-color: #bccbde;
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 .article p {
