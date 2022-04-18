@@ -1,12 +1,3 @@
-/*
-- The article element should set grid columns using `repeat` along with the `auto-fit` and `minmax` properties
-- The article columns should have a minimum value of 250px and a maximum of 1fr unit
-- The article element has a gap of 15px
-- The card elements inside the article container have a height of 200px
-- The sidebar only spans across the first column
-- The nav and article elements only span across the second column
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +48,7 @@
   background-color: #FF7755;
   display: grid;
   grid-row: 2 / 4;
+  grid-column: 1 / 2;
   gap: 50px;
 }
 
@@ -84,6 +76,7 @@
 
 .nav {
   background-color: #FF7755;
+  grid-column: 2 / 3;
 }
 
 .nav ul {
@@ -97,7 +90,15 @@
 }
 
 .article {
+  /*
+  - The article element should set grid columns using `repeat` along with the `auto-fit` and `minmax` properties
+  - The article columns should have a minimum value of 250px and a maximum of 1fr unit
+  - The article element has a gap of 15px
+  - The card elements inside the article container have a height of 200px
+  */
   background-color: #bccbde;
+  display: grid;
+  grid-column: 2 / 3;
 }
 
 .article p {
