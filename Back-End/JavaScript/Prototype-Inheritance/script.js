@@ -26,7 +26,11 @@
 */
 
 // Solution 1:
-
+/*
+    * 1. True  
+    * 2. Null
+    * 3. Undefined
+*/
 
 
 /*
@@ -59,7 +63,35 @@
         * Benchmark if needed.
 */
 
-// Solution 2:
+// Solution 2a:
+let head = {
+    glasses: 1,
+};
+
+let table = {
+    pen: 3,
+    __proto__: head
+};
+
+let bed = {
+    sheet: 1,
+    pillow: 2,
+    __proto__: table
+};
+
+let pockets = {
+    money: 2000,
+    __proto__: bed
+};
+
+console.log(pockets)
+console.log(head) 
+console.log(pockets.glasses) // Expect 1
+console.log(table.sheet) // Expect Undefined
+console.log(bed.pen) // Expect 3
+
+// Solution 2b:
+// It makes no difference
 
 
 
@@ -83,7 +115,7 @@
 */
 
 // Solution 3:
-
+// Rabbit because "this" is the object before the dot
 
 
 /*
@@ -115,8 +147,25 @@
     * alert( lazy.stomach ); // apple
 */
 
-
 // Solution 4:
+let hamster = {
+    stomach: [],
+    eat(food) {
+        this.stomach.push(food);
+    }
+};
 
+let speedy = {
+    stomach: [],
+    __proto__: hamster
+};
 
+let lazy = {
+    stomach: [],
+    __proto__: hamster
+};
 
+speedy.eat("apple");
+alert( speedy.stomach );
+
+alert( lazy.stomach );
