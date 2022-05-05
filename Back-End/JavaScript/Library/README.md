@@ -32,4 +32,4 @@ Add a button on each book’s display to remove the book from the library.
 
 ---
 ### Attributions ###
-* None yet (check back later)
+* [Book icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/book "Favicon Website")
