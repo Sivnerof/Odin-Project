@@ -2,8 +2,6 @@
 
 A project to build a library application from [The Odin Projects](https://www.theodinproject.com/ "Odin Project Website") course on full stack development. View application requirements [here](https://www.theodinproject.com/lessons/node-path-javascript-library "Project Requirements") or continue reading.
 
----
-
 ## Assignment ##
 
 1. If you haven’t already, set up your project with skeleton HTML/CSS and JS files.
