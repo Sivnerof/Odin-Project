@@ -33,3 +33,4 @@ Add a button on each book’s display to remove the book from the library.
 ---
 ### Attributions ###
 * [Book icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/book "Favicon Website")
+* [CSS Reset](https://meyerweb.com/eric/tools/css/reset/ "Reset Style Sheet") created by [Eric Meyers](https://twitter.com/meyerweb "Erics Twitter")
