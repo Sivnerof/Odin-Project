@@ -4,6 +4,8 @@
 
 /* Global Variables */
 
+
+/* Typography */
 html {
     box-sizing: border-box;
     height: 100%;
@@ -13,35 +15,6 @@ html {
 body {
     min-height: 100%;
     width: 100%;
-    position: relative;
-}
-
-header, footer {
-    height: 7rem;
-    width: 100%;
-}
-
-header {
-    font-size: 3rem;
-    line-height: 2;
-    text-align: center;
-    position: sticky;
-    top: 0px;
-}
-
-
-
-footer {
-    font-size: 2rem;
-    line-height: 2;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-}
-
-footer p {
-    padding-top: 25px;
-    padding-bottom: 25px;
 }
 
 
