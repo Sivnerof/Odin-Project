@@ -1,0 +1,15 @@
+This is the card structure I chose for the page.
+
+<section>
+    <button>Delete</button>
+    <article>
+        <h2>Title</h2>
+        <p>Author</p>
+        <p>Pages</p>
+        <p>Read Status</p>
+        <details>
+            <summary>More Info</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui expedita iste sequi explicabo ducimus repellendus.</p>
+        </details>
+    </article>
+</section>
