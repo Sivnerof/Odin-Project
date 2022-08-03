@@ -1,15 +1,16 @@
 This is the card structure I chose for the page.
 
-<section>
-    <button>Delete</button>
-    <article>
-        <h2>Title</h2>
-        <p>Author</p>
-        <p>Pages</p>
-        <p>Read Status</p>
-        <details>
+<div class="card">
+    <article class="book">
+        <h2 class="book-title">Title</h2>
+        <p class="book-author">Author</p>
+        <p class="page-count">Pages</p>
+        <p class="read-status">Read Status</p>
+        <details class="more-info">
             <summary>More Info</summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui expedita iste sequi explicabo ducimus repellendus.</p>
         </details>
     </article>
-</section>
+    <button type="button" class="status">Mark As Read</button>
+    <button type="button" class="delete">Delete</button>
+</div>
