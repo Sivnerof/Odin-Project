@@ -14,7 +14,7 @@
 
 <!-- Form Structure -->
 
-<form>
+<form action="#" method="get">
     <label for="title">Title</label>
     <input type="text" id="title" name="title" value="Harry Potter">
 

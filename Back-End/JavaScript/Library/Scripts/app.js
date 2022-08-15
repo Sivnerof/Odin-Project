@@ -1,6 +1,12 @@
 // Globals
 let myLibrary = [];
 
+// Elements
+const openFormButton = document.querySelector('.open-form-button');
+const deleteAllButton = document.querySelector('.delete-all-button');
+const addBookButton = document.querySelector('.add-book-button');
+
+
 // Book Constructor
 function Book(title, author, pages, read){
     this.title = title;
@@ -28,6 +34,26 @@ function addBookToLibrary() {
     const newBook = createBook()
     myLibrary.unshift(newBook);
 }
+
+// Event Listeners
+addBookButton.addEventListener('click', () => {
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = document.getElementById('pages').value;
+
+    //broken code below
+    const radios = document.getElementsByName('read-status');
+    let readStatus = '';
+
+    for (let i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            readStatus = radios[i].value;
+            break;
+        }
+    }
+    console.log(title, author, pages, readStatus);
+})
+
 
 // Notes
 /**
