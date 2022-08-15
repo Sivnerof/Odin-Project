@@ -28,15 +28,19 @@
     <label for="pages">Pages</label>
     <input type="number" id="pages" name="pages" value="0">
 
-    <label for="read">Read</label>
-    <input type="radio" id="read" name="read-status">
+    <fieldset>
+        <legend>Read Status</legend>
 
-    <label for="not-read">Not Read</label>
-    <input type="radio" id="not-read" name="read-status">
+        <label for="read">Read</label>
+        <input type="radio" id="read" name="read-status">
+
+        <label for="not-read">Not Read</label>
+        <input type="radio" id="not-read" name="read-status">
+    </fieldset>
 
     <label for="more-info">More Info</label>
     <textarea id="more-info" cols="40" rows="4" maxlength="250">Additional Information</textarea>
 
-    <input type="reset">
-    <input type="submit" value="Submit">
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
 </form>
