@@ -5,6 +5,7 @@ let myLibrary = [];
 const openFormButton = document.querySelector('.open-form-button');
 const deleteAllButton = document.querySelector('.delete-all-button');
 const addBookButton = document.querySelector('.add-book-button');
+const booksSection = document.querySelector('.books');
 
 
 // Book Constructor
@@ -21,46 +22,75 @@ Book.prototype.info = function (){
 }
 
 // Returns a Book object
-function createBook (){
-    const title = prompt("Title");
-    const author = prompt("Author");
-    const pages = prompt("Pages");
-    const read = prompt("Read");
-    return new Book(title, author, pages, read);
+function createBook (title, author, pages, readStatus){
+    return new Book(title, author, pages, readStatus);
 }
 
-// Creates a Book and adds it to start of myLibrary
-function addBookToLibrary() {
-    const newBook = createBook()
+// Creates a Book and adds it to start of myLibrary Array
+function addBookToLibrary(title, author, pages, readStatus) {
+    const newBook = createBook(title, author, pages, readStatus);
     myLibrary.unshift(newBook);
+    addBookToUI();
 }
 
-// Event Listeners
-addBookButton.addEventListener('click', () => {
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const pages = document.getElementById('pages').value;
+// Add myLibrary[0] values to newly created elements
+function addBookToUI(){ 
+    const section = document.createElement("section");
+    const titleH3 = document.createElement("h3"); 
+    const authorPara = document.createElement("p");
+    const pagePara = document.createElement("p");
+    const readStatusPara = document.createElement("p");
 
-    //broken code below
+    titleH3.innerText = myLibrary[0]["title"];
+    authorPara.innerText = myLibrary[0]["author"];
+    pagePara.innerText = myLibrary[0]["pages"];
+    readStatusPara.innerText = myLibrary[0]["read"];
+
+    section.appendChild(titleH3);
+    section.appendChild(authorPara);
+    section.appendChild(pagePara);
+    section.appendChild(readStatusPara);
+
+    booksSection.appendChild(section);
+}
+
+// Gets read-status from radio buttons
+function getReadStatus(){
     const radios = document.getElementsByName('read-status');
-    let readStatus = '';
+
+    let checkedValue = '';
 
     for (let i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
-            readStatus = radios[i].value;
+            checkedValue = radios[i].value;
             break;
         }
     }
-    console.log(title, author, pages, readStatus);
+
+    return checkedValue;
+}
+
+// Get Form Data
+function getFormData(){
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = document.getElementById('pages').value;
+    const readStatus = getReadStatus();
+    const formArray = [title, author, pages, readStatus];
+    return formArray;
+}
+
+// Event Listeners
+addBookButton.addEventListener('click', e => {
+    e.preventDefault();
+    const formData = getFormData();
+    addBookToLibrary(formData[0], formData[1], formData[2], formData[3]);
+    console.log(myLibrary);
 })
 
 
 // Notes
 /**
- *  3. Write a function that loops through the array and displays each book on the page. 
- *  You can display them in some sort of table, or each on their own “card”. 
- *  It might help for now to manually add a few books to your array so you can see the display.
- *  
  *  4. Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: 
  *  author, title, number of pages, whether it’s been read and anything else you might want.
  *  
