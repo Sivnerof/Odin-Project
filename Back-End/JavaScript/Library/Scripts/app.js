@@ -1,5 +1,6 @@
 // Globals
-let myLibrary = [];
+const myLibrary = [];
+let dataIndex = -1;
 
 // Elements
 const openFormButton = document.querySelector('.open-form-button');
@@ -34,22 +35,32 @@ function addBookToLibrary(title, author, pages, readStatus) {
 }
 
 // Add myLibrary[0] values to newly created elements
-function addBookToUI(){ 
+function addBookToUI(){
+    dataIndex++;
+    console.log(dataIndex);
     const section = document.createElement("section");
     const titleH3 = document.createElement("h3"); 
     const authorPara = document.createElement("p");
     const pagePara = document.createElement("p");
     const readStatusPara = document.createElement("p");
+    const readStatusButton = document.createElement("button");
+    const deleteBookButton = document.createElement("button");
 
     titleH3.innerText = myLibrary[0]["title"];
     authorPara.innerText = myLibrary[0]["author"];
     pagePara.innerText = myLibrary[0]["pages"];
     readStatusPara.innerText = myLibrary[0]["read"];
+    readStatusButton.innerText = "Change Read Status";
+    deleteBookButton.innerText = "Delete";
+
+    section.classList.add(`data-index-${dataIndex}`);
 
     section.appendChild(titleH3);
     section.appendChild(authorPara);
     section.appendChild(pagePara);
     section.appendChild(readStatusPara);
+    section.appendChild(readStatusButton);
+    section.appendChild(deleteBookButton);
 
     booksSection.appendChild(section);
 }
@@ -81,12 +92,24 @@ function getFormData(){
 }
 
 // Event Listeners
+
+// Event listener for form submit button
 addBookButton.addEventListener('click', e => {
     e.preventDefault();
     const formData = getFormData();
     addBookToLibrary(formData[0], formData[1], formData[2], formData[3]);
     console.log(myLibrary);
 })
+
+// Event listener to delete all books from DOM
+deleteAllButton.addEventListener('click', () => {
+    myLibrary.length = 0;
+    dataIndex = -1;
+    while (booksSection.childNodes.length > 2) {
+        booksSection.removeChild(booksSection.lastChild);
+    }
+})
+
 
 
 // Notes
