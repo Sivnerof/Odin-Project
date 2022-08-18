@@ -1,6 +1,6 @@
 // Globals
 const myLibrary = [];
-let dataIndex = -1;
+let dataIndex = 0;
 
 // Elements
 const openFormButton = document.querySelector('.open-form-button');
@@ -30,14 +30,12 @@ function createBook (title, author, pages, readStatus){
 // Creates a Book and adds it to start of myLibrary Array
 function addBookToLibrary(title, author, pages, readStatus) {
     const newBook = createBook(title, author, pages, readStatus);
-    myLibrary.unshift(newBook);
+    myLibrary.push(newBook);
     addBookToUI();
 }
 
 // Add myLibrary[0] values to newly created elements
 function addBookToUI(){
-    dataIndex++;
-    console.log(dataIndex);
     const section = document.createElement("section");
     const titleH3 = document.createElement("h3"); 
     const authorPara = document.createElement("p");
@@ -46,10 +44,10 @@ function addBookToUI(){
     const readStatusButton = document.createElement("button");
     const deleteBookButton = document.createElement("button");
 
-    titleH3.innerText = myLibrary[0]["title"];
-    authorPara.innerText = myLibrary[0]["author"];
-    pagePara.innerText = myLibrary[0]["pages"];
-    readStatusPara.innerText = myLibrary[0]["read"];
+    titleH3.innerText = myLibrary[dataIndex]["title"];
+    authorPara.innerText = myLibrary[dataIndex]["author"];
+    pagePara.innerText = myLibrary[dataIndex]["pages"];
+    readStatusPara.innerText = myLibrary[dataIndex]["read"];
     readStatusButton.innerText = "Change Read Status";
     deleteBookButton.innerText = "Delete";
 
@@ -63,6 +61,23 @@ function addBookToUI(){
     section.appendChild(deleteBookButton);
 
     booksSection.appendChild(section);
+
+    updateStatus(dataIndex, readStatusButton, readStatusPara);
+
+    dataIndex++;
+}
+
+// Change read status of para element at stored index
+function updateStatus(index, button, para){
+    button.addEventListener('click', () => {
+        if (para.innerText === 'read'){
+            myLibrary[index]["read"] = 'unread';
+            para.innerText = 'unread';
+        } else {
+            myLibrary[index]["read"] = 'read';
+            para.innerText = 'read';
+        }
+    });
 }
 
 // Gets read-status from radio buttons
@@ -98,13 +113,12 @@ addBookButton.addEventListener('click', e => {
     e.preventDefault();
     const formData = getFormData();
     addBookToLibrary(formData[0], formData[1], formData[2], formData[3]);
-    console.log(myLibrary);
 })
 
 // Event listener to delete all books from DOM
 deleteAllButton.addEventListener('click', () => {
     myLibrary.length = 0;
-    dataIndex = -1;
+    dataIndex = 0;
     while (booksSection.childNodes.length > 2) {
         booksSection.removeChild(booksSection.lastChild);
     }
@@ -114,9 +128,6 @@ deleteAllButton.addEventListener('click', () => {
 
 // Notes
 /**
- *  4. Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: 
- *  author, title, number of pages, whether it’s been read and anything else you might want.
- *  
  *  5. Add a button on each book’s display to remove the book from the library.
  *      A. You will need to associate your DOM elements with the actual book objects in some way. 
  *      One easy solution is giving them a data-attribute that corresponds to the index of the library array.
