@@ -82,7 +82,11 @@ function updateStatus(index, button, para){
 
 // Delete book section from DOM
 function deleteBook(index, button){
-
+    button.addEventListener('click', () => {
+        const bookToRemove = document.querySelector(`[data-index='${index}']`);
+        bookToRemove.remove();
+        myLibrary.splice(index, 1);
+    });
 }
 
 // Gets read-status from radio buttons
