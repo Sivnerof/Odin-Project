@@ -54,7 +54,7 @@ function updateUI(){
         readStatusPara.innerText = value["read"];
         readStatusButton.innerText = "Change Read Status";
         deleteBookButton.innerText = "Delete";
-    
+
         section.appendChild(titleH3);
         section.appendChild(authorPara);
         section.appendChild(pagePara);
@@ -62,6 +62,7 @@ function updateUI(){
         section.appendChild(readStatusButton);
         section.appendChild(deleteBookButton);
         section.setAttribute("data-index", index);
+        section.classList.add("card");
     
         booksSection.appendChild(section);
     

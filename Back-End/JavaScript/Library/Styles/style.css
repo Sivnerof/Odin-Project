@@ -1,4 +1,8 @@
-/* Fonts */
+/*
+  ========================================
+  Fonts
+  ========================================
+*/
 
 @font-face {
     font-family: 'handwriting';
@@ -16,12 +20,26 @@
     font-style: normal;
 }
 
-/* Color Scheme */
 
-/* Global Variables */
+/*
+  ========================================
+  Globals
+  ========================================
+*/
+
+:root {
+    --lighter-red: #FFAAAA;
+    --darker-red: #AA3939;
+    --eggshell: #fbf9f3;
+}
 
 
-/* Typography */
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -29,12 +47,30 @@ html {
 }
 
 body {
+    font-family: "typewriter", Helvetica, Arial, sans-serif;
+    background: var(--eggshell);
     min-height: 100%;
     width: 100%;
 }
 
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2.1rem;
+}
+
+p, label, legend, address {
+    font-size: 1.6rem;
+}
+
 
 /* Delete These Temporary Values */
-section {
-    border: 1px solid red;
+.card {
+    background-color: var(--lighter-red);
 }
