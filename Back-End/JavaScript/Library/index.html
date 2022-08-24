@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./Assets/favicon.ico">
-    <!--<link type="text/css" rel="stylesheet" href="./Styles/reset.css">-->
+    <link type="text/css" rel="stylesheet" href="./Styles/reset.css">
     <link type="text/css" rel="stylesheet" href="./Styles/style.css">
     <script defer src="./Scripts/app.js"></script>
     <title>My Library</title>
@@ -14,8 +14,8 @@
 
     <header>
         <h1 class="logo"><a href="./index.html">My Library</a></h1>
-        <button class="open-form-button" type="button">Add Book</button>
-        <button class="delete-all-button" type="button">Delete All</button>
+        <button class="delete-all-button secondary-button" type="button">Delete All</button>
+        <button class="open-form-button primary-button" type="button">Add Book</button>
     </header>
 
     <main>
@@ -42,8 +42,8 @@
                     <input type="radio" id="unread" name="read-status" value="unread" required>
                 </fieldset>
 
-                <button type="reset">Reset</button>
-                <button class="add-book-button" type="submit">Submit</button>
+                <button type="reset" class="secondary-button">Reset</button>
+                <button class="add-book-button primary-button" type="submit">Submit</button>
             </form>
         </section>
 

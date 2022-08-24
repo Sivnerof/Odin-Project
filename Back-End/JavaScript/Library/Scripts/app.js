@@ -52,15 +52,17 @@ function updateUI(){
         authorPara.innerText = value["author"];
         pagePara.innerText = value["pages"];
         readStatusPara.innerText = value["read"];
-        readStatusButton.innerText = "Change Read Status";
+        readStatusButton.innerText = `Mark ${value["read"]}`;
         deleteBookButton.innerText = "Delete";
+        readStatusButton.classList.add("primary-button");
+        deleteBookButton.classList.add("secondary-button");
 
         section.appendChild(titleH3);
         section.appendChild(authorPara);
         section.appendChild(pagePara);
         section.appendChild(readStatusPara);
-        section.appendChild(readStatusButton);
         section.appendChild(deleteBookButton);
+        section.appendChild(readStatusButton);
         section.setAttribute("data-index", index);
         section.classList.add("card");
     
