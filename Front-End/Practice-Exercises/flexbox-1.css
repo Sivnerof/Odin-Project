@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    background-color: #c7f0c7;
+    border: 5px solid #238000;
+}
+
+.main {
+    height: 50%;
+    background-color: #fabbbb;
+    border: 5px solid #a52b2a;
+}
+
+.header, .footer {
+    height: 25%;
+    background-color: #add8e6;
+    border: 5px solid #2000ff;
+}
