@@ -10,14 +10,20 @@
     border: 5px solid #238000;
 }
 
+/* Height is 50% - 20px. 15px to make up for the margin, and 5px to make up for the border. */
 .main {
-    height: 50%;
+    height: calc(50% - 20px);
     background-color: #fabbbb;
     border: 5px solid #a52b2a;
 }
 
+/* Height is 25% - 20px. 15px to make up for the margin, and 5px to make up for the border. */
 .header, .footer {
-    height: 25%;
+    height: calc(25% - 20px);
     background-color: #add8e6;
     border: 5px solid #2000ff;
+}
+
+.container > * {
+    margin: 15px;
 }
