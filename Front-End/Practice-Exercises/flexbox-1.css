@@ -22,8 +22,36 @@
     height: calc(25% - 20px);
     background-color: #add8e6;
     border: 5px solid #2000ff;
+    display: flex;
 }
 
 .container > * {
     margin: 15px;
+}
+
+header > div {
+    display: flex;
+    flex: 1;
+    margin: 15px;
+    background-color: #fcdab9;
+    border: 5px solid #f78072;
+}
+
+header > div > div {
+    background-color: #fabbbb;
+    border: 5px solid #f50105;
+    margin: 5px;
+    flex: 1;
+}
+
+.peach {
+    background-color: #fcdab9;
+}
+
+.salmon {
+    background-color: #fac0cb;
+}
+
+.light-purple {
+    background-color: #e2deff;
 }
