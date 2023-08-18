@@ -44,6 +44,45 @@ header > div > div {
     flex: 1;
 }
 
+main {
+    display: flex;
+}
+
+main > div {
+    margin: 15px;
+    flex: 1;
+}
+
+main > :nth-child(1) {
+    border: 5px solid #a52b2a;
+}
+
+main > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+main > :nth-child(2) > div {
+    flex: 1;
+    margin-bottom: 5px;
+    border: 5px solid #a52b2a;
+}
+
+footer > div {
+    display: flex;
+    margin: 10px;
+}
+
+footer > .main-footer-box {
+    flex: 1;
+    border: 5px solid #6a5acd;
+}
+
+footer > .small-footer-box {
+    flex: 0.5;
+    border: 5px solid #f78072;
+}
+
 .peach {
     background-color: #fcdab9;
 }
