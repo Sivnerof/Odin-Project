@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .menu-container {
     color: #fff;
     background-color: #5995DA;  /* Blue */
@@ -19,3 +34,11 @@
     justify-content: space-around;
 }
 
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 20px;
+}
