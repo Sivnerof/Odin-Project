@@ -19,6 +19,26 @@
     align-items: center;
 }
 
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;  /* <--- Really freaking cool! */
+    align-items: center;
+}
+
+.photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+}
+
 .menu-container {
     color: #fff;
     background-color: #5995DA;  /* Blue */
