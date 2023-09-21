@@ -2,12 +2,12 @@ function simpleGreeting(name, greeting="Hello"){
     return `${greeting}... ${name}`
 }
 
-document.write(simpleGreeting("Bob"));
-document.write(simpleGreeting("Charlie", "Hi"));
-
 function simpleGreeting2(){
     document.write("Hello Alice!");
 }
+
+document.write(simpleGreeting("Bob"));
+document.write(simpleGreeting("Charlie", "Hi"));
 
 setTimeout(simpleGreeting2, 5000);
 
