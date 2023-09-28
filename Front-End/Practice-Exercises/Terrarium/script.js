@@ -42,12 +42,3 @@ function dragElement(terrariumElement) {
         document.onpointermove = null;
     }
 }
-
-function displayCandy(){
-	let candy = ['jellybeans'];
-	function addCandy(candyType) {
-		candy.push(candyType)
-	}
-	addCandy('gumdrops');
-}
-displayCandy();

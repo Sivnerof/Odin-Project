@@ -84,3 +84,23 @@ h1 {
 	opacity: 0.7;
 	z-index: -1;
 }
+
+.jar-glossy-long {
+	width: 2%;
+	height: 30%;
+	position: absolute;
+	left: 3%;
+	top: 50%;
+	border-radius: 1rem;
+	background: #eefeff;
+}
+
+.jar-glossy-short {
+	width: 2%;
+	height: 7%;
+	position: absolute;
+	left: 3%;
+	top: 40%;
+	border-radius: 1rem;
+	background: #eefeff;
+}
