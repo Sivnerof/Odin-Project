@@ -1,4 +1,3 @@
-// inside script.js
 // all of our quotes
 const quotes = [
     'When you have eliminated the impossible, whatever remains, however improbable, must be the truth.',
@@ -9,6 +8,7 @@ const quotes = [
     'Nothing clears up a case so much as stating it to another person.',
     'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
 ];
+
 // store the list of words and the index of the word the player is currently typing
 let words = [];
 let wordIndex = 0;
